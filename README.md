@@ -359,7 +359,7 @@ const dedicated = Account.createFromPrivateKey("dedicatedPrivateKey", network);
 owner.signTransactionWithCosignatories(aggregateTransaction, [dedicated], generationHash);
 ```
 
-You can use `ApostilleUtils.extractSignersFromArray` to get all the signers (as array of [Account](https://nemtech.github.io/symbol-sdk-typescript-javascript/classes/_model_account_account_.account.html)) from an array of Apostilles.
+You can use `ApostilleUtils.extractSignersFromArray` to get all the signers (as array of [Account](https://nemtech.github.io/concepts/account.html)) from an array of Apostilles.
 
 ```typescript
 const signers = ApostilleUtils.extractSignersFromArray([apostille1, apostille2, ...])
