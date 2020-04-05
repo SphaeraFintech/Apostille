@@ -33,7 +33,7 @@ export class ApostilleTransactions {
 
     /**
      * Create base transactions for the Apostille
-     * @param {Apostille} apostille An Apostille
+     * @param {Apostille} apostille - An Apostille
      * @return {InnerTransaction[]}
      */
     public static create(apostille: Apostille): InnerTransaction[] {
@@ -50,10 +50,10 @@ export class ApostilleTransactions {
 
     /**
      * Create an AccountMetadataTransaction
-     * @param {Apostille} apostille An Apostille
-     * @param {string} metadataKey Metadata hex key
-     * @param {string} oldVal Old metadata value
-     * @param {string} newVal New metadata value
+     * @param {Apostille} apostille - An Apostille
+     * @param {string} metadataKey - Metadata hex key
+     * @param {string} oldVal - Old metadata value
+     * @param {string} newVal - New metadata value
      * @return {InnerTransaction}
      */
     public static metadata(apostille: Apostille, metadataKey: string, oldVal: string, newVal: string): InnerTransaction {
@@ -71,7 +71,7 @@ export class ApostilleTransactions {
 
     /**
      * Assign ownership of a dedicated account
-     * @param {Apostille} apostille An Apostille
+     * @param {Apostille} apostille - An Apostille
      * @return {InnerTransaction}
      */
     public static ownership(apostille: Apostille): InnerTransaction {
@@ -80,7 +80,7 @@ export class ApostilleTransactions {
 
     /**
      * Create a core transfer transaction
-     * @param {Apostille} apostille An Apostille
+     * @param {Apostille} apostille - An Apostille
      * @return {InnerTransaction}
      */
     public static core(apostille: Apostille): InnerTransaction {
@@ -94,7 +94,7 @@ export class ApostilleTransactions {
 
     /**
      * Create an history transfer transaction
-     * @param {Apostille} apostille An Apostille
+     * @param {Apostille} apostille - An Apostille
      * @return {InnerTransaction}
      */
     public static history(apostille: Apostille): InnerTransaction {

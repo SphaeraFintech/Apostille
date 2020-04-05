@@ -22,10 +22,10 @@ export class ApostilleAccount {
     /**
      * Generate an Apostille account for a file. 
      * Will always generate the same account for a given file name and owner private key
-     * @param {string} privateKey Private key of owner
-     * @param {string} filename File name (with extension)
-     * @param {NetworkType} network Network type
-     * @return {Account} Apostille Account
+     * @param {string} privateKey - Private key of owner
+     * @param {string} filename - File name (with extension)
+     * @param {NetworkType} network - Network type
+     * @return {Account} - Apostille Account
      */
     public static create(privateKey: string, filename: string, network: NetworkType): Account {
         const owner = Account.createFromPrivateKey(privateKey, network);

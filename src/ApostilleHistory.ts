@@ -23,9 +23,9 @@ export class ApostilleHistory {
 
     /**
      * Create an history account used for indexing Apostilles
-     * @param {string} privateKey Private key of owner
-     * @param {NetworkType} network Network type
-     * @return {Account} History Account
+     * @param {string} privateKey - Private key of owner
+     * @param {NetworkType} network - Network type
+     * @return {Account} - History Account
      */
     public static create(privateKey: string, network: NetworkType): Account {
         const owner = Account.createFromPrivateKey(privateKey, network);
@@ -38,9 +38,9 @@ export class ApostilleHistory {
 
     /**
      * Create a metadata transaction for recording history account address in owner's account metadata
-     * @param {PublicAccount} owner PublicAccount of owner
-     * @param {PublicAccount} history PublicAccount of history
-     * @param {NetworkType} network Network type
+     * @param {PublicAccount} owner - PublicAccount of owner
+     * @param {PublicAccount} history - PublicAccount of history
+     * @param {NetworkType} network - Network type
      * @return {InnerTransaction}
      */
     public static metadataTransaction(owner: PublicAccount, history: PublicAccount, network: NetworkType): InnerTransaction {

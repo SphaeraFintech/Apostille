@@ -42,14 +42,14 @@ export class Apostille {
 
     /**
      * Create an Apostille
-     * @param {string} filename Name of the file (with extension)
-     * @param {string} fileContent Content of the file (as Base64)
-     * @param {string} tags Tags for the file
-     * @param {string} description Description for the file
-     * @param {string} url Url for the file
-     * @param {string} privateKey Private key of owner
-     * @param {NetworkType} network Network type
-     * @return {Apostille} An Apostille
+     * @param {string} filename - Name of the file (with extension)
+     * @param {string} fileContent - Content of the file (as Base64)
+     * @param {string} tags - Tags for the file
+     * @param {string} description - Description for the file
+     * @param {string} url - Url for the file
+     * @param {string} privateKey - Private key of owner
+     * @param {NetworkType} network - Network type
+     * @return {Apostille} - An Apostille
      */
     public static create(filename: string, fileContent: string, tags: string, description: string, url: string, privateKey: string, network: NetworkType): Apostille {
         const owner = Account.createFromPrivateKey(privateKey, network);
@@ -61,8 +61,8 @@ export class Apostille {
 
     /**
      * Update an Apostille
-     * @param {Metadata[]} metadata Dedicated account's metadata
-     * @return {boolean} True if success, false otherwise
+     * @param {Metadata[]} metadata - Dedicated account's metadata
+     * @return {boolean} - True if success, false otherwise
      */
     public update(metadata: Metadata[]): boolean {
         const m = ApostilleMetadata.create(metadata);

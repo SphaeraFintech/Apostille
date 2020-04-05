@@ -25,9 +25,9 @@ export class ApostilleVerificationResult {
 
     /**
      * Create an object containing the Apostille verification result
-     * @param {number} code Result code
-     * @param {boolean} result Verification result
-     * @param {ApostilleMetadata} metadata Apostille metadata (optional)
+     * @param {number} code - Result code
+     * @param {boolean} result - Verification result
+     * @param {ApostilleMetadata} metadata - Apostille metadata (optional)
      * @return {ApostilleVerificationResult}
      */
     public static create(code: number, result: boolean, metadata: ApostilleMetadata = undefined): ApostilleVerificationResult {

@@ -22,7 +22,7 @@ export class ApostilleUtils {
     /**
      * Create a short date as yyyy-mm-dd
      * @param {Date} date
-     * @return {string} Date as yyyy-mm-dd
+     * @return {string} - Date as yyyy-mm-dd
      */
     public static toShortDate(date: Date): string {
         let dd: number | string = date.getDate();
@@ -35,8 +35,8 @@ export class ApostilleUtils {
 
     /**
      * Get the extension of a file
-     * @param {string} filename
-     * @return {string} File extension
+     * @param {string} filename - Name of the file
+     * @return {string} - File extension
      */
     public static getExtension(filename: string): string {
         return "." + filename.split('.').slice(1).pop() || "";
@@ -44,8 +44,8 @@ export class ApostilleUtils {
 
     /**
      * Remove the extension of a file
-     * @param {string} filename
-     * @return {string} File name without extension
+     * @param {string} filename - Name of the file
+     * @return {string} - File name without extension
      */
     public static removeExtension(filename: string): string {
         return filename.replace(/\.[^/.]+$/, "");
@@ -53,8 +53,8 @@ export class ApostilleUtils {
 
     /**
      * Extract all signers required from an array of Apostilles
-     * @param {Apostilles[]} apostilles Apostille array
-     * @return {Account[]} An array of signers Accounts
+     * @param {Apostilles[]} apostilles - Apostille array
+     * @return {Account[]} - An array of signers Accounts
      */
     public static extractSigners(apostilles: Apostille[]): Account[] {
         let signers = [];
@@ -69,8 +69,8 @@ export class ApostilleUtils {
 
     /**
      * Extract all transactions from an array of Apostilles
-     * @param {Apostilles[]} apostilles Apostille array
-     * @return {InnerTransaction[]} An array of inner transactions
+     * @param {Apostilles[]} apostilles - Apostille array
+     * @return {InnerTransaction[]} - An array of inner transactions
      */
     public static extractTransactions(apostilles: Apostille[]): InnerTransaction[] {
         let txes = [];
@@ -82,9 +82,9 @@ export class ApostilleUtils {
 
     /**
      * Return the MetadataEntry corresponding to a given key from an array of Metadata
-     * @param {Metadata[]} metadata Metadata array
-     * @param {string} key Metadata key
-     * @return {MetadataEntry} MetadataEntry or undefined
+     * @param {Metadata[]} metadata - Metadata array
+     * @param {string} key - Metadata key
+     * @return {MetadataEntry} - MetadataEntry or undefined
      */
     public static findMetadataByKey(metadata: Metadata[], key: string): MetadataEntry {
         const meta = metadata.find(meta => meta.metadataEntry.scopedMetadataKey.toHex().toLocaleLowerCase() === key);
@@ -93,9 +93,9 @@ export class ApostilleUtils {
 
     /**
      * Check if two metadata values are identical
-     * @param {string} firstValue A value
-     * @param {string} secondValue A value
-     * @return {boolean} True if identical, false otherwise
+     * @param {string} firstValue - A value
+     * @param {string} secondValue - A value
+     * @return {boolean} - True if identical, false otherwise
      */
     public static isIdentical(firstValue: string, secondValue: string): boolean {
         if (firstValue === secondValue) return true;
@@ -104,8 +104,8 @@ export class ApostilleUtils {
 
     /**
      * Extract dedicated account from file name in Apostille format
-     * @param {string} filename File name in Apostille format (Ex: "MyProject - TBLJAVZXTDY3EXNVC5IMEYZN35OPHAQK5GOQXWPH - 2020-01-29.txt")
-     * @return {Address} Dedicated account or undefined
+     * @param {string} filename - File name in Apostille format (Ex: "MyProject - TBLJAVZXTDY3EXNVC5IMEYZN35OPHAQK5GOQXWPH - 2020-01-29.txt")
+     * @return {Address} - Dedicated account or undefined
      */
     public static extractDedicatedFromName(filename: string): Address {
         const arr = filename.split(" ");
@@ -119,8 +119,8 @@ export class ApostilleUtils {
 
     /**
      * Retrieve original file name from file name in Apostille format
-     * @param {string} filename File name in Apostille format (Ex: "MyProject - TBLJAVZXTDY3EXNVC5IMEYZN35OPHAQK5GOQXWPH - 2020-01-29.txt")
-     * @return {string} Original file name with extension
+     * @param {string} filename - File name in Apostille format (Ex: "MyProject - TBLJAVZXTDY3EXNVC5IMEYZN35OPHAQK5GOQXWPH - 2020-01-29.txt")
+     * @return {string} - Original file name with extension
      */
     public static getOriginalFilename(filename: string): string {
         const arr = filename.split(" ");

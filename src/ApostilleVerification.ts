@@ -24,9 +24,9 @@ export class ApostilleVerification {
 
     /**
      * Verify an Apostille
-     * @param {string} filename Name of the file in Apostille format (Ex: "MyProject - TBLJAVZXTDY3EXNVC5IMEYZN35OPHAQK5GOQXWPH - 2020-01-29.txt")
-     * @param {string} data File content (as Base64)
-     * @param {Metadata[]} metadata Dedicated account's metadata
+     * @param {string} filename - Name of the file in Apostille format (Ex: "MyProject - TBLJAVZXTDY3EXNVC5IMEYZN35OPHAQK5GOQXWPH - 2020-01-29.txt")
+     * @param {string} data - File content (as Base64)
+     * @param {Metadata[]} metadata - Dedicated account's metadata
      * @return {ApostilleVerificationResult}
      */
     public static verify(filename: string, data: string, metadata: Metadata[]): ApostilleVerificationResult {
@@ -41,11 +41,11 @@ export class ApostilleVerification {
 
     /**
      * Verify an Apostille hash signature
-     * @param {string} publicKey Public key of owner
-     * @param {string} data File content (as Base64)
-     * @param {string} hash Apostille hash
-     * @param {NetworkType} network Network type
-     * @return {boolean} True if hash signature is valid, false otherwise
+     * @param {string} publicKey - Public key of owner
+     * @param {string} data - File content (as Base64)
+     * @param {string} hash - Apostille hash
+     * @param {NetworkType} network - Network type
+     * @return {boolean} - True if hash signature is valid, false otherwise
      */
     public static verifyHash(publicKey: string, data: string, hash: string, network: NetworkType): boolean {
         const owner = PublicAccount.createFromPublicKey(publicKey, network);

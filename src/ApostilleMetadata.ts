@@ -28,8 +28,8 @@ export class ApostilleMetadata {
 
     /**
      * Isolate Apostille related metadata from dedicated account's metadata
-     * @param {Metadata[]} metadata Dedicated account's metadata
-     * @return {ApostilleMetadata} Apostille metadata
+     * @param {Metadata[]} metadata - Dedicated account's metadata
+     * @return {ApostilleMetadata} - Apostille metadata
      */
     public static create(metadata: Metadata[]): ApostilleMetadata {
         const name = ApostilleUtils.findMetadataByKey(metadata, metadataKey.name);

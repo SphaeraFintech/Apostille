@@ -26,9 +26,9 @@ export class ApostilleHash {
 
     /**
      * Hash the file content and sign it
-     * @param {string} data File content (as Base64)
-     * @param {string} privateKey Private key of owner
-     * @param {NetworkType} network Network type
+     * @param {string} data - File content (as Base64)
+     * @param {string} privateKey - Private key of owner
+     * @param {NetworkType} network - Network type
      * @return {ApostilleHash}
      */
     public static create(data: string, privateKey: string, network: NetworkType): ApostilleHash {
@@ -39,8 +39,8 @@ export class ApostilleHash {
 
     /**
      * Hash the file content with SHA256
-     * @param {string} data File content (Base64)
-     * @return {string} SHA256 hash of the file content
+     * @param {string} data - File content (Base64)
+     * @return {string} - SHA256 hash of the file content
      */
     public static hash(data: string): string {
         const rawContent = CryptoJS.enc.Base64.parse(data);
