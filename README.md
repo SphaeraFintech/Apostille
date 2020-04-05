@@ -1,4 +1,4 @@
-# Apostille 
+# Apostille
 
 The official Apostille SDK, available for browsers, mobile applications, and NodeJS, to work
 with Symbol blockchain (NEM2 / Catapult)
@@ -227,7 +227,7 @@ ApostilleHistory.create(<parameters>)
 
 #### Return 
 
-[Account](https://nemtech.github.io/concepts/account.html)
+[Account](https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/account/Account.ts)
 
 #### Example
 
@@ -359,7 +359,7 @@ const dedicated = Account.createFromPrivateKey("dedicatedPrivateKey", network);
 owner.signTransactionWithCosignatories(aggregateTransaction, [dedicated], generationHash);
 ```
 
-You can use `ApostilleUtils.extractSignersFromArray` to get all the signers (as array of [Account](https://nemtech.github.io/concepts/account.html)) from an array of Apostilles.
+You can use `ApostilleUtils.extractSignersFromArray` to get all the signers (as array of [Account](https://github.com/nemtech/symbol-sdk-typescript-javascript/blob/master/src/model/account/Account.ts)) from an array of Apostilles.
 
 ```typescript
 const signers = ApostilleUtils.extractSignersFromArray([apostille1, apostille2, ...])
