@@ -198,11 +198,11 @@ The history account is deterministic and generated from the following seed:
 
 Seed is hashed using SHA256, signed with owner's private key and resulting signature is truncated to keep only 32 bytes as history account's private key.
 
-See [ApostilleHistory.ts](../blob/master/src/ApostilleHistory.ts)
+See [ApostilleHistory.ts](src/ApostilleHistory.ts)
 
 #### Illustration
 
-![Flowchart](./src/images/apo8.png)
+![Flowchart](src/images/apo8.png)
 
 ### 2.2 - Create an history account
 
@@ -227,7 +227,7 @@ ApostilleHistory.create(<parameters>)
 
 #### Return 
 
-[Account](https://nemtech.github.io/symbol-sdk-typescript-javascript/classes/_model_account_account_.account.html) (symbol-sdk)
+[Account](https://nemtech.github.io/concepts/account.html)
 
 #### Example
 
@@ -249,7 +249,7 @@ const apostille = Apostille.create(<parameters>);
 console.log("History account is:", apostille.history)
 ```
 
-See [ApostilleHistory.ts](../blob/master/src/ApostilleHistory.ts)
+See [ApostilleHistory.ts](src/ApostilleHistory.ts)
 
 ### 2.3 - Create an Apostille
 
@@ -315,7 +315,7 @@ const apostille = Apostille.create(filename, file_content, tags, description, ur
 
 **Note**: Tags, description and url can be empty if you don't need them.
 
-See [Apostille.ts](../blob/master/src/Apostille.ts)
+See [Apostille.ts](src/Apostille.ts)
 
 ### 2.4 - Send an Apostille
 
@@ -492,7 +492,7 @@ Name          | Type          | Description                                     
 
 #### Return
 
-An [ApostilleVerificationResult](../blob/master/src/ApostilleVerificationResult.ts)
+An [ApostilleVerificationResult](src/ApostilleVerificationResult.ts)
 
 #### Example
 
