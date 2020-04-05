@@ -1,0 +1,30 @@
+{
+  "name": "apostille",
+  "version": "0.0.1",
+  "description": "Apostille - A blockchain notarization and timestamping solution with transferable, updatable, branded, and conjointly owned notarizations.",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist/ && tsc",
+    "test": "mocha --ui bdd --recursive ./dist/test --timeout 90000"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/crypto-js": "^3.1.43",
+    "@types/mocha": "^2.2.44",
+    "assert": "^1.4.1",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "ts-mockito": "^2.5.0",
+    "tslint": "^5.20.1",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "rxjs": "^6.5.3",
+    "rxjs-compat": "^6.5.3",
+    "symbol-sdk": "^0.17.3"
+  },
+  "author": "Sphaera Fintech SASU",
+  "license": "Apache-2.0"
+}

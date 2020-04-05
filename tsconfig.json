@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "module": "commonjs",
+        "target": "es2016",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "outDir": "dist",
+        "sourceMap": true,
+        "skipLibCheck": true,
+        "lib": [
+            "es2017",
+            "dom"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "files": [
+        "index.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "include": [
+        "test/**/*.spec.ts",
+        "src/**/*.ts",
+        "examples/**/*.ts"
+    ]
+}

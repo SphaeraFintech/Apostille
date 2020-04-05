@@ -187,7 +187,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright 2020 SPHAERA FINTECH SASU
+   Copyright 2018 NEM
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -202,21 +202,46 @@
    limitations under the License.
 
 =======================================================================
-Apostille Subcomponents:
+symbol-sdk-typescript-javascript Subcomponents:
 
-Apostille contains subcomponents with separate copyright
+The symbol-sdk-typescript-javascript contains subcomponents with separate copyright
 notices and license terms. Your use of the source code for the these
 subcomponents is subject to the terms and conditions of the following
 licenses.
 
+
 ========================================================================
-For symbol-sdk:
+For js-joda:
 ========================================================================
 
-See licenses/LICENSE-symbol-sdk.txt
+See license/LICENSE-js-joda.txt
+
+========================================================================
+For request:
+========================================================================
+
+See license/LICENSE-request.txt
+
+========================================================================
+For request-promise-native:
+========================================================================
+
+See license/LICENSE-request-promise-native.txt
 
 ========================================================================
 For rxjs:
 ========================================================================
 
-See licenses/LICENSE-rxjs.txt
+See license/LICENSE-rxjs.txt
+
+========================================================================
+For utf8:
+========================================================================
+
+See license/LICENSE-utf8.txt
+
+========================================================================
+For ws:
+========================================================================
+
+See license/LICENSE-ws.txt
