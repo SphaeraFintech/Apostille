@@ -1,5 +1,8 @@
 # Apostille
 
+[![npm version](https://badge.fury.io/js/apostille.svg)](https://badge.fury.io/js/apostille)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 The official Apostille SDK, available for browsers, mobile applications, and NodeJS, to work
 with Symbol blockchain (NEM2 / Catapult)
 
@@ -171,6 +174,10 @@ The hash structure remains the same as version 1:
 
 Same as in version 1, a dedicated account is generated from the signed SHA256 of the file name; it is deterministic and unique for each file.
 
+```typescript
+sign(SHA256(filename));
+```
+
 The dedicated account stores the file historical hashes in it's transactions and, in it's metadata, the file name, current file hash, tags, description and url.
 
 #### History account
@@ -202,7 +209,7 @@ See [ApostilleHistory.ts](src/ApostilleHistory.ts)
 
 #### Illustration
 
-![Flowchart](src/images/apo8.png)
+![Flowchart](https://github.com/SphaeraFintech/Apostille/blob/master/src/images/apo8.png)
 
 ### 2.2 - Create an history account
 
@@ -212,7 +219,7 @@ To create the history account we use the `ApostilleHistory` class.
 import { ApostilleHistory } from 'apostille';
 ```
 
-#### Function
+#### Method
 
 ```typescript
 ApostilleHistory.create(<parameters>)
@@ -259,7 +266,7 @@ To create an Apostille we use the `Apostille` class and `create` method.
 import { Apostille } from 'apostille';
 ```
 
-#### Function
+#### Method
 
 ```typescript
 Apostille.create(<parameters>)
@@ -558,5 +565,5 @@ const result = ApostilleVerification.verifyHash(publicKey, data, hash, network);
 
 ## 4 - License 
 
-Copyright (c) 2018-2019 SPHAERA FINTECH SASU
+Copyright (c) 2020 SPHAERA FINTECH SASU
 Licensed under the [Apache License 2.0](LICENSE)
