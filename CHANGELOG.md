@@ -11,5 +11,5 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 - Initial release
 
-[0.0.2]: https://github.com/SphaeraFintech/Apostille/compare/v0.0.1...v0.0.2
+[0.0.2]: https://github.com/SphaeraFintech/Apostille/compare/0.0.1...0.0.2
 [0.0.1]: https://github.com/SphaeraFintech/Apostille/releases/tag/0.0.1
