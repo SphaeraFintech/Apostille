@@ -16,15 +16,15 @@
 
 import { ApostilleHash } from '../src/ApostilleHash';
 import { expect } from 'chai';
-import { APOSTILLE_CHECKSUM, FILE_CONTENT, MAIN_ACCOUNT, NETWORK_TYPE, APOSTILLE_DATA_HASH } from './conf.spec';
+import { APOSTILLE_HEADER, FILE_CONTENT, MAIN_ACCOUNT, NETWORK_TYPE, APOSTILLE_DATA_HASH } from './conf.spec';
 
 describe('ApostilleHash', () => {
 
     it('should create a signed Apostille hash', () => {
         const expectedHash = APOSTILLE_DATA_HASH;
-        const expectedFullHash = APOSTILLE_CHECKSUM + expectedHash;
+        const expectedFullHash = APOSTILLE_HEADER + expectedHash;
         const apostilleHash = ApostilleHash.create(FILE_CONTENT, MAIN_ACCOUNT.privateKey, NETWORK_TYPE);
-        expect(apostilleHash.checksum).to.be.equal(APOSTILLE_CHECKSUM);
+        expect(apostilleHash.header).to.be.equal(APOSTILLE_HEADER);
         expect(apostilleHash.data).to.be.equal(expectedHash);
         expect(apostilleHash.full).to.be.equal(expectedFullHash);
     });

@@ -20,7 +20,7 @@ import { Account, NetworkType } from 'symbol-sdk';
 
 export class ApostilleHash {
 
-    constructor(public readonly checksum: string,
+    constructor(public readonly header: string,
         public readonly data: string,
         public readonly full: string) { }
 
@@ -34,7 +34,7 @@ export class ApostilleHash {
     public static create(data: string, privateKey: string, network: NetworkType): ApostilleHash {
         const owner = Account.createFromPrivateKey(privateKey, network);
         const hash = owner.signData(ApostilleHash.hash(data));
-        return new ApostilleHash(ApostilleConstants.checksum, hash, ApostilleConstants.checksum + hash);
+        return new ApostilleHash(ApostilleConstants.header, hash, ApostilleConstants.header + hash);
     }
 
     /**

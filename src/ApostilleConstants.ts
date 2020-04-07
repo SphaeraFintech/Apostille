@@ -15,10 +15,10 @@
  */
 
 /**
- * Apostille checksum
+ * Apostille header
  * @type {string}
  */
-export const checksum: string = "FE4E545983";
+export const header: string = "FE4E545983";
 
 /**
  * Network
