@@ -1,6 +1,6 @@
 {
   "name": "apostille",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Apostille - A blockchain notarization and timestamping solution with transferable, updatable, branded, and conjointly owned notarizations.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,6 +24,12 @@
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
     "symbol-sdk": "^0.17.3"
+  },
+  "homepage": "https://github.com/SphaeraFintech/Apostille#readme",
+  "bugs": "https://github.com/SphaeraFintech/Apostille/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SphaeraFintech/Apostille.git"
   },
   "author": "Sphaera Fintech SASU",
   "license": "Apache-2.0"
