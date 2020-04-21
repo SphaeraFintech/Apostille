@@ -30,8 +30,8 @@ export class ApostilleAccount {
     public static create(privateKey: string, filename: string, network: NetworkType): Account {
         const owner = Account.createFromPrivateKey(privateKey, network);
         const hash256 = CryptoJS.SHA256(filename).toString(CryptoJS.enc.Hex);
-        let signedFilename = owner.signData(hash256);
-        let dedicatedAccountPrivateKey = signedFilename.substring(0, 64);
+        const signedFilename = owner.signData(hash256);
+        const dedicatedAccountPrivateKey = signedFilename.substring(0, 64);
         return Account.createFromPrivateKey(dedicatedAccountPrivateKey, network);
     }
 

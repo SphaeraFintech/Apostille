@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { NetworkType, PublicAccount, Metadata, Convert } from 'symbol-sdk';
+import { NetworkType, PublicAccount, Metadata } from 'symbol-sdk';
 import { ApostilleMetadata } from './ApostilleMetadata';
 import { ApostilleUtils } from './ApostilleUtils';
 import { ApostilleVerificationResult } from './ApostilleVerificationResult';
@@ -49,8 +49,8 @@ export class ApostilleVerification {
      */
     public static verifyHash(publicKey: string, data: string, hash: string, network: NetworkType): boolean {
         const owner = PublicAccount.createFromPublicKey(publicKey, network);
-        let sha256 = ApostilleHash.hash(data);
-        return owner.verifySignature(Convert.utf8ToHex(sha256), hash.substring(10));
+        const sha256 = ApostilleHash.hash(data);
+        return owner.verifySignature(sha256, hash.substring(10));
     };
 
 }

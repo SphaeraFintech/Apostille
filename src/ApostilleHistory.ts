@@ -31,8 +31,8 @@ export class ApostilleHistory {
         const owner = Account.createFromPrivateKey(privateKey, network);
         const seed = "Apostille-history-of-" + owner.address.plain();
         const hash256 = CryptoJS.SHA256(seed).toString(CryptoJS.enc.Hex);
-        let signedFilename = owner.signData(hash256);
-        let historyAccountPrivateKey = signedFilename.substring(0, 64);
+        const signedFilename = owner.signData(hash256);
+        const historyAccountPrivateKey = signedFilename.substring(0, 64);
         return Account.createFromPrivateKey(historyAccountPrivateKey, network);
     }
 
