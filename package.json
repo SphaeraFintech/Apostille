@@ -1,6 +1,6 @@
 {
   "name": "apostille",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Apostille - A blockchain notarization and timestamping solution with transferable, updatable, branded, and conjointly owned notarizations.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
