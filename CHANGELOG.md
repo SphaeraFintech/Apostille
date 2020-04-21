@@ -6,7 +6,8 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 ## [0.0.3] - 21-Apr-2020
 
 - Bump symbol-sdk to 0.18.0
-- Changed a few 'let' to 'const' and removed utf8ToHex in signature verification
+- Changed a few 'let' to 'const'
+- Removed utf8ToHex in signature verification
 
 ## [0.0.2] - 07-Apr-2020
 
