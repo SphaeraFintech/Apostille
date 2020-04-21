@@ -6,7 +6,7 @@
 The official Apostille SDK, available for browsers, mobile applications, and NodeJS, to work
 with Symbol blockchain (NEM2 / Catapult)
 
-:warning: **This program is currently in development. Do not use in production.**
+:warning: **This library is currently in development. Do not use in production.**
 
 ## Requirements
 
@@ -175,7 +175,7 @@ The hash structure remains the same as version 1:
 Same as in version 1, a dedicated account is generated from the signed SHA256 of the file name; it is deterministic and unique for each file.
 
 ```typescript
-sign(SHA256(filename));
+sign(SHA256(filename)).substring(0, 64);
 ```
 
 The dedicated account stores the file historical hashes in it's transactions and, in it's metadata, the file name, current file hash, tags, description and url.
