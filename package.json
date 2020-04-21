@@ -23,7 +23,7 @@
     "crypto-js": "^3.1.9-1",
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
-    "symbol-sdk": "^0.17.3"
+    "symbol-sdk": "^0.18.0"
   },
   "homepage": "https://github.com/SphaeraFintech/Apostille#readme",
   "bugs": "https://github.com/SphaeraFintech/Apostille/issues",
